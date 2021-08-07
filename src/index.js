@@ -32,7 +32,7 @@ let twoCharDigitsDecades = {
   60: "sixty",
   70: "seventy",
   80: "eighty",
-  90: "ninety",
+  90: "ninty",
 };
 let twoCharDigits = {
   1: "ten",
