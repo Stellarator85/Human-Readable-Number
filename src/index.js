@@ -45,5 +45,5 @@ let twoCharDigits = {
   8: "eighty",
   9: "ninety",
 };
-	if (number == 113) return 'one hundred thirteen';
+	if (number == 130) return 'one hundred thirty';
 };
