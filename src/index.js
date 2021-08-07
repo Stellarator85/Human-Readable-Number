@@ -64,6 +64,7 @@ let twoCharDigits = {
 
   if (number.toString().length == 2 && number % 10 == 0)
     return twoCharDigitsDecades[number];
+	
   if (number > 20 && number < 100 && number % 10 > 0)
     return (
       number
@@ -80,7 +81,8 @@ let twoCharDigits = {
           return oneCharDigits[x];
         })
     );
-  if (number > 103 && number < 1000 && number % 100 == 0)
+	
+  if (number >= 100 && number < 1000 && number % 100 == 0)
     return (
       number
         .toString()
@@ -89,7 +91,7 @@ let twoCharDigits = {
           return oneCharDigits[x];
         }) + " hundred"
     );
-  if (number > 103 && number < 1000 && number % 100 < 10)
+  if (number > 100 && number < 1000 && number % 100 < 10)
     return (
       number
         .toString()
@@ -106,7 +108,7 @@ let twoCharDigits = {
         })
     );
 
-  if (number > 103 && number < 1000 && number % 100 > 10 && number % 100 < 20)
+  if (number > 100 && number < 1000 && number % 100 > 10 && number % 100 < 20)
     return (
       number
         .toString()
@@ -123,13 +125,7 @@ let twoCharDigits = {
         })
     );
 
-	if (number === 100) return 'hundred';
-	if (number === 101) return 'hundred one';
-	if (number === 102) return 'hundred two';
-	if (number === 103) return 'hundred three';
-	
-
-  if (number > 103 && number < 1000 && number % 10 == 0)
+  if (number > 100 && number < 1000 && number % 10 == 0)
     return (
       number
         .toString()
@@ -145,11 +141,8 @@ let twoCharDigits = {
           return twoCharDigits[z];
         })
     );
-
 	
-
-	
-  if (number > 103 && number < 1000 && number % 100 >= 20)
+  if (number > 100 && number < 1000 && number % 100 >= 20)
     return (
       number
         .toString()
@@ -175,4 +168,3 @@ let twoCharDigits = {
 
   if (number == 1000) return "one thousand";
 };
-
