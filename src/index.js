@@ -97,8 +97,7 @@ let twoCharDigits = {
         .replace(/./g, function (x) {
           return oneCharDigits[x];
         }) +
-      " hundred" +
-      " and " +
+      " hundred " +
       number
         .toString()
         .substr(2, 1)
@@ -115,8 +114,7 @@ let twoCharDigits = {
         .replace(/./g, function (x) {
           return oneCharDigits[x];
         }) +
-      " hundred" +
-      " and " +
+      " hundred " +
       number
         .toString()
         .substr(2, 1)
@@ -134,7 +132,6 @@ let twoCharDigits = {
           return oneCharDigits[x];
         }) +
       " hundred" +
-      " and " +
       number
         .toString()
         .substr(1, 1)
@@ -151,8 +148,7 @@ let twoCharDigits = {
         .replace(/./g, function (x) {
           return oneCharDigits[x];
         }) +
-      " hundred" +
-      " and " +
+      " hundred " +
       number
         .toString()
         .substr(1, 1)
