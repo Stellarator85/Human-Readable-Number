@@ -46,6 +46,7 @@ let twoCharDigits = {
   9: "ninety",
 };
     
+/*Rule 1*/	
 	if (number.toString().length == 1)
     return number
       .toString()
@@ -54,15 +55,17 @@ let twoCharDigits = {
         return oneCharDigits[x];
       })
       .join("");
-    
-    
-    if (number > 10 && number < 20)
+/*Rule 2*/	
+  if (number > 10 && number < 20)
     return number
       .toString()
       .substring(1)
       .replace(/./g, function (k) {
         return twoCharDigits11_19[k];
       });
+/*Rule 3*/	
+  if (number.toString().length == 2 && number % 10 == 0)
+    return twoCharDigitsDecades[number];
     
     
     
