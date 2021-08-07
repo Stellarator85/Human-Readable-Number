@@ -80,7 +80,7 @@ let twoCharDigits = {
           return oneCharDigits[x];
         })
     );
-  if (number >= 100 && number < 1000 && number % 100 == 0)
+  if (number > 100 && number < 1000 && number % 100 == 0)
     return (
       number
         .toString()
@@ -140,6 +140,9 @@ let twoCharDigits = {
         })
     );
 
+	if (number = 100) return 'hundred';
+
+	
   if (number > 100 && number < 1000 && number % 100 >= 20)
     return (
       number
