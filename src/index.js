@@ -54,4 +54,16 @@ let twoCharDigits = {
         return oneCharDigits[x];
       })
       .join("");
+    
+    
+    if (number > 10 && number < 20)
+    return number
+      .toString()
+      .substring(1)
+      .replace(/./g, function (k) {
+        return twoCharDigits11_19[k];
+      });
+    
+    
+    
 };
