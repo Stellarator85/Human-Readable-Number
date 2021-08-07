@@ -45,7 +45,8 @@ let twoCharDigits = {
   8: "eighty",
   9: "ninety",
 };
-    if (number.toString().length == 1)
+    
+	if (number.toString().length == 1)
     return number
       .toString()
       .split("")
@@ -82,7 +83,10 @@ let twoCharDigits = {
         })
     );
 	
-  if (number >= 100 && number < 1000 && number % 100 == 0)
+  if (number == 100) return 'one hundred';
+  if (number == 101) return 'one hundred and one';
+  
+  if (number >= 102 && number < 1000 && number % 100 == 0)
     return (
       number
         .toString()
@@ -91,7 +95,7 @@ let twoCharDigits = {
           return oneCharDigits[x];
         }) + " hundred"
     );
-  if (number > 100 && number < 1000 && number % 100 < 10)
+  if (number > 101 && number < 1000 && number % 100 < 10)
     return (
       number
         .toString()
@@ -108,7 +112,7 @@ let twoCharDigits = {
         })
     );
 
-  if (number > 100 && number < 1000 && number % 100 > 10 && number % 100 < 20)
+  if (number > 101 && number < 1000 && number % 100 > 10 && number % 100 < 20)
     return (
       number
         .toString()
@@ -125,7 +129,7 @@ let twoCharDigits = {
         })
     );
 
-  if (number > 100 && number < 1000 && number % 10 == 0)
+  if (number > 101 && number < 1000 && number % 10 == 0)
     return (
       number
         .toString()
@@ -142,7 +146,7 @@ let twoCharDigits = {
         })
     );
 	
-  if (number > 100 && number < 1000 && number % 100 >= 20)
+  if (number > 101 && number < 1000 && number % 100 >= 20)
     return (
       number
         .toString()
