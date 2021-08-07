@@ -123,6 +123,8 @@ let twoCharDigits = {
         })
     );
 
+	if (number === 100) return 'hundred';
+
   if (number > 100 && number < 1000 && number % 10 == 0)
     return (
       number
@@ -140,7 +142,7 @@ let twoCharDigits = {
         })
     );
 
-	if (number = 100) return 'hundred';
+	
 
 	
   if (number > 100 && number < 1000 && number % 100 >= 20)
