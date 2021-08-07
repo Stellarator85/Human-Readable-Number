@@ -131,7 +131,7 @@ let twoCharDigits = {
         .replace(/./g, function (x) {
           return oneCharDigits[x];
         }) +
-      " hundred" +
+      " hundred " +
       number
         .toString()
         .substr(1, 1)
