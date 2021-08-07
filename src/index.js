@@ -1,4 +1,4 @@
-module.exports = toReadable (number) {
+module.exports = function toReadable (number) {
  
   let oneCharDigits = {
   0: "zero",
