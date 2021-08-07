@@ -27,7 +27,7 @@ let twoCharDigitsDecades = {
   10: "ten",
   20: "twenty",
   30: "thirty",
-  40: "fouty",
+  40: "fourty",
   50: "fifty",
   60: "sixty",
   70: "seventy",
@@ -66,7 +66,108 @@ let twoCharDigits = {
 /*Rule 3*/	
   if (number.toString().length == 2 && number % 10 == 0)
     return twoCharDigitsDecades[number];
-    
-    
-    
+/*Rule 4*/	
+  if (number > 20 && number < 100 && number % 10 > 0)
+    return (
+      number
+        .toString()
+        .substr(0, 1)
+        .replace(/./g, function (y) {
+          return twoCharDigits[y];
+        }) +
+      " " +
+      number
+        .toString()
+        .substr(1, 1)
+        .replace(/./g, function (x) {
+          return oneCharDigits[x];
+        })
+    );
+	/*Rule 5*/	
+  if (number >= 100 && number < 1000 && number % 100 == 0)
+    return (
+      number
+        .toString()
+        .substr(0, 1)
+        .replace(/./g, function (x) {
+          return oneCharDigits[x];
+        }) + " hundred"
+    );
+	/*Rule 6*/	
+  if (number > 100 && number < 1000 && number % 100 < 10)
+    return (
+      number
+        .toString()
+        .substr(0, 1)
+        .replace(/./g, function (x) {
+          return oneCharDigits[x];
+        }) +
+      " hundred " +
+      number
+        .toString()
+        .substr(2, 1)
+        .replace(/./g, function (f) {
+          return oneCharDigits[f];
+        })
+    );
+/*Rule 7*/	
+  if (number > 100 && number < 1000 && number % 100 > 10 && number % 100 < 20)
+    return (
+      number
+        .toString()
+        .substr(0, 1)
+        .replace(/./g, function (x) {
+          return oneCharDigits[x];
+        }) +
+      " hundred " +
+      number
+        .toString()
+        .substr(2, 1)
+        .replace(/./g, function (k) {
+          return twoCharDigits11_19[k];
+        })
+    );
+/*Rule 8*/	
+  if (number > 100 && number < 1000 && number % 10 == 0)
+    return (
+      number
+        .toString()
+        .substr(0, 1)
+        .replace(/./g, function (x) {
+          return oneCharDigits[x];
+        }) +
+      " hundred " +
+      number
+        .toString()
+        .substr(1, 1)
+        .replace(/./g, function (z) {
+          return twoCharDigits[z];
+        })
+    );
+/*Rule 9*/		
+  if (number > 100 && number < 1000 && number % 100 >= 20)
+    return (
+      number
+        .toString()
+        .substr(0, 1)
+        .replace(/./g, function (x) {
+          return oneCharDigits[x];
+        }) +
+      " hundred " +
+      number
+        .toString()
+        .substr(1, 1)
+        .replace(/./g, function (z) {
+          return twoCharDigits[z];
+        }) +
+      " " +
+      number
+        .toString()
+        .substr(2, 1)
+        .replace(/./g, function (u) {
+          return oneCharDigits[u];
+        })
+    );
+/*Rule 10*/	
+  if (number == 1000) return "one thousand";
 };
