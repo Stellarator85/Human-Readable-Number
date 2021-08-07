@@ -1,4 +1,4 @@
-module.exports = function toReadable (number) {
+module.exports = toReadable (number) {
  
   let oneCharDigits = {
   0: "zero",
@@ -45,5 +45,13 @@ let twoCharDigits = {
   8: "eighty",
   9: "ninety",
 };
-	if (number == 19) return 'nineteen';
+    
+	if (number.toString().length == 1)
+    return number
+      .toString()
+      .split("")
+      .map(function (x) {
+        return oneCharDigits[x];
+      })
+      .join("");
 };
