@@ -24,7 +24,7 @@ let twoCharDigits11_19 = {
   9: "nineteen",
 };
 let twoCharDigitsDecades = {
-  10: "ten",
+  10: "tent",
   20: "twenty",
   30: "thirty",
   40: "fourty",
@@ -32,7 +32,7 @@ let twoCharDigitsDecades = {
   60: "sixty",
   70: "seventy",
   80: "eighty",
-  90: "ninty",
+  90: "ninety",
 };
 let twoCharDigits = {
   1: "ten",
